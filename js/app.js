@@ -26,15 +26,15 @@ inputContainer.innerHTML += '<button id=avanti>avanti</button>'
 const avanti = document.getElementById('avanti')
 
 avanti.addEventListener('click', function () {
-    document.getElementById("img" + current).style.display = "none";
-    document.getElementById("img" + ++current).style.display = "block";
+    document.getElementById("img" + current).style.display = "none"
+    document.getElementById("img" + ++current).style.display = "block"
 
     console.log (current)
 });
 
 indietro.addEventListener('click', function () {
-    document.getElementById("img" + current).style.display = "none";
-    document.getElementById("img" + ++current).style.display = "block";
+    document.getElementById("img" + current).style.display = "none"
+    document.getElementById("img" + ++current).style.display = "block"
 
     console.log (current)
 });
