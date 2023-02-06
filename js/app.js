@@ -14,28 +14,29 @@ for (let i=0; i<5; i++) {
     document.getElementById("img" + i).style.position = "relative";
 }
 
-let current = 0
-console.log (current)
+let active = 0
+console.log (active)
 
-document.getElementById("img" + current).style.display = "block";
+document.getElementById("img" + active).style.display = "block";
 
 inputContainer.innerHTML += '<button id=indietro>indietro</button>'
-const indietro = document.getElementById('indietro')
-
 inputContainer.innerHTML += '<button id=avanti>avanti</button>'
+
+const indietro = document.getElementById('indietro')
 const avanti = document.getElementById('avanti')
 
 avanti.addEventListener('click', function () {
-    document.getElementById("img" + current).style.display = "none"
-    if (current == 4) { current = -1 }
-    document.getElementById("img" + ++current).style.display = "block"
+    document.getElementById("img" + active).style.display = "none"
+    if (active == 4) { active = -1 }
+    document.getElementById("img" + ++active).style.display = "block"
 
-    console.log (current)
+    console.log (active)
 });
 
 indietro.addEventListener('click', function () {
-    document.getElementById("img" + current).style.display = "none"
-    document.getElementById("img" + --current).style.display = "block"
+    document.getElementById("img" + active).style.display = "none"
+    if (active == 0) { active = 5 }
+    document.getElementById("img" + --active).style.display = "block"
 
-    console.log (current)
+    console.log (active)
 });
