@@ -19,6 +19,9 @@ console.log (current)
 
 document.getElementById("img" + current).style.display = "block";
 
+inputContainer.innerHTML += '<button id=indietro>indietro</button>'
+const indietro = document.getElementById('indietro')
+
 inputContainer.innerHTML += '<button id=avanti>avanti</button>'
 const avanti = document.getElementById('avanti')
 
@@ -27,4 +30,11 @@ avanti.addEventListener('click', function () {
     document.getElementById("img" + ++current).style.display = "block";
 
     console.log (current)
-})
+});
+
+indietro.addEventListener('click', function () {
+    document.getElementById("img" + current).style.display = "none";
+    document.getElementById("img" + ++current).style.display = "block";
+
+    console.log (current)
+});
