@@ -27,6 +27,7 @@ const avanti = document.getElementById('avanti')
 
 avanti.addEventListener('click', function () {
     document.getElementById("img" + current).style.display = "none"
+    if (current == 4) { current = -1 }
     document.getElementById("img" + ++current).style.display = "block"
 
     console.log (current)
