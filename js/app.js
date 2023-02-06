@@ -34,7 +34,7 @@ avanti.addEventListener('click', function () {
 
 indietro.addEventListener('click', function () {
     document.getElementById("img" + current).style.display = "none"
-    document.getElementById("img" + ++current).style.display = "block"
+    document.getElementById("img" + --current).style.display = "block"
 
     console.log (current)
 });
